@@ -21,7 +21,7 @@ blur[offset_x:offset_x+res_ori.shape[0], offset_y:offset_y+res_ori.shape[1]] = r
 
 #crop image
 blur = blur[0:res_back.shape[0], offset_y:offset_y+res_ori.shape[1]]
-cv2.imwrite('pikachu-blur.png', blur)
+cv2.imwrite('images/pikachu-blur.png', blur)
 
 
 
