@@ -20,7 +20,7 @@ def generate_blur(image):
     factor = BOX_LENGTH / max(dims)
     res_ori = cv2.resize(img, (int(dims[1]*factor), int(dims[0]*factor)), interpolation = cv2.INTER_AREA)
 
-    #reize the image to complete the blur backgorund
+    #resize the image to complete the blur backgorund
     factor = BOX_LENGTH / min(dims)
     res_back= cv2.resize(img, (int(dims[1]*factor), int(dims[0]*factor)), interpolation = cv2.INTER_AREA)
     blur = cv2.GaussianBlur(res_back,(65,65), 0)
