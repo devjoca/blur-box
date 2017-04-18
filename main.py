@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 BOX_LENGTH = 500.0
-img = cv2.imread('pikachu.png')
+img = cv2.imread('portrait.png')
 dims = img.shape[:2]
 
 #resized img to fit the whole image inside the box
@@ -21,7 +21,7 @@ blur[offset_x:offset_x+res_ori.shape[0], offset_y:offset_y+res_ori.shape[1]] = r
 
 #crop image
 blur = blur[0:res_back.shape[0], offset_y:offset_y+res_ori.shape[1]]
-cv2.imwrite('images/pikachu-blur.png', blur)
+cv2.imwrite('images/blur.png', blur)
 
 
 
