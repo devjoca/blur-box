@@ -11,4 +11,14 @@ jQuery(document).ready(function($) {
 
         reader.readAsDataURL(this.files[0]);
     });
+
+    form.submit(function(e) {
+        e.preventDefault();
+
+        $.post(form.attr('action'), {
+            image: $('#img_preview').attr('src')
+        }).then(function(data) {
+            $('#img_blur').attr('src', 'data:image/png;base64,' + data)
+        })
+    })
 });
