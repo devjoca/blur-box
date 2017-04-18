@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 BOX_LENGTH = 500.0
-img = cv2.imread('portrait.png')
+img = cv2.imread('landscape.png')
 dims = img.shape[:2]
 
 #resized img to fit the whole image inside the box
@@ -20,7 +20,11 @@ offset_y = res_back.shape[1]/2 - res_ori.shape[1]/2
 blur[offset_x:offset_x+res_ori.shape[0], offset_y:offset_y+res_ori.shape[1]] = res_ori
 
 #crop image
-blur = blur[0:res_back.shape[0], offset_y:offset_y+res_ori.shape[1]]
+if res_back.shape[0] < res_back.shape[1]:
+    blur = blur[0:res_back.shape[0], offset_y:offset_y+res_ori.shape[1]]
+else:
+    blur = blur[offset_x:offset_x+res_ori.shape[0], 0:res_back.shape[1]]
+
 cv2.imwrite('images/blur.png', blur)
 
 
