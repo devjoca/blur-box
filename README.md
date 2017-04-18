@@ -1,6 +1,6 @@
 # blur-box
 
-The main focus of this project was to generate a blur box. Actually work for portraint and landscape photos
+The main focus of this project was to generate a blur box. Actually work for portrait and landscape photos
 
 For images like
 
