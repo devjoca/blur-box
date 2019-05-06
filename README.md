@@ -9,3 +9,9 @@ For images like
 It would transform to
 
 ![Pikachu Blur](http://i.imgur.com/6QqRCZk.png)
+
+How to use it
+
+```shell
+python main.py path/to/the/file.png
+```
